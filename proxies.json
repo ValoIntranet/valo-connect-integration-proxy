@@ -1,0 +1,42 @@
+{
+    "$schema": "http://json.schemastore.org/proxies",
+    "proxies": {
+        "xero-identity-connect-token": {
+            "matchCondition": {
+                "methods": [ "POST" ],
+                "route": "/xero-identity/connect/token"
+            },
+            "backendUri": "https://identity.xero.com/connect/token"
+        },
+        "xero-api-connect-token": {
+            "matchCondition": {
+                "methods": [ "GET" ],
+                "route": "/xero-api/connections"
+            },
+            "backendUri": "https://api.xero.com/connections"
+        },
+        "xero-api-payruns": {
+            "matchCondition": {
+                "methods": [ "GET" ],
+                "route": "/xero-api/payroll.xro/1.0/Payruns"
+            },
+            "backendUri": "https://api.xero.com/payroll.xro/1.0/Payruns"
+        },
+        "xero-api-payrun": {
+            "matchCondition": {
+                "methods": [ "GET" ],
+                "route": "/xero-api/payroll.xro/1.0/Payruns/{payRunId}"
+            },
+            "backendUri": "https://api.xero.com/payroll.xro/1.0/Payruns/{payRunId}"
+        },
+        "xero-api-payslip": {
+            "matchCondition": {
+                "methods": [ "GET" ],
+                "route": "/xero-api/payroll.xro/1.0/Payslip/{paySlipId}"
+            },
+            "backendUri": "https://api.xero.com/payroll.xro/1.0/Payslip/{paySlipId}"
+        }
+        
+    }
+
+}
