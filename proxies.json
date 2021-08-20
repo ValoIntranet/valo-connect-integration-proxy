@@ -1,6 +1,17 @@
 {
     "$schema": "http://json.schemastore.org/proxies",
     "proxies": {
+        "assets": {
+            "disabled": false,
+            "matchCondition": {
+                "methods": [ "GET", "OPTIONS" ],
+                "route": "/assets/{*path}"
+            },
+            "backendUri": "https://localhost/ServeStaticFile?file={path}",
+            "responseOverrides": {
+                "response.headers.Cache-Control": "public,max-age=600"
+            }
+        },
         "xero-identity-connect-token": {
             "matchCondition": {
                 "methods": [ "POST" ],
