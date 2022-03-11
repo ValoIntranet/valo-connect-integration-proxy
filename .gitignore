@@ -262,3 +262,8 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+
+
+# Project specific exclusions - ZIP files (so Teams apps aren't inadvertently included, and Temp folder).
+Temp/
+*.zip
